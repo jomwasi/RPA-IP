@@ -118,7 +118,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="524.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Agent Ready. Please use ALT + s to trigger the Automation&quot;]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="524.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Agent Ready. Please use ALT + S to trigger the Automation&quot;]" />
       <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="524.6666666666666,1599.3333333333333" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
         <ui:TriggerScope.Action>
           <ActivityAction x:TypeArguments="ui:EventInfoTriggerArgs">
@@ -152,18 +152,10 @@
                     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;A request is available ready to start proccessing&quot;]" />
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadRequest.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReadRequest.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="RequestFilePath">
-                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.CurrentDirectory+&quot;\Requests\Request.xlsx&quot;" />
-                        </InArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="ContactName">
-                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strContact" />
-                        </OutArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="Email">
-                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strEmail" />
-                        </OutArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="Subject">
-                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSubject" />
-                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="RequestFilePath">[Environment.CurrentDirectory+"\Requests\Requests.xlsx"]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ContactName">[strContact]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="Email">[strEmail]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="Subject">[strSubject]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The client &quot; + strContact + &quot; reachable on the email address &quot; + strEmail + &quot; needs help with &quot; + strSubject]" />
@@ -176,7 +168,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;sorry there are available requests to process&quot;]" />
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;sorry there are no available requests to process&quot;]" />
                   </Sequence>
                 </If.Else>
               </If>
@@ -185,7 +177,7 @@
         </ui:TriggerScope.Action>
         <ui:TriggerScope.Triggers>
           <scg:List x:TypeArguments="Activity" Capacity="4">
-            <ui:HotkeyTriggerV2 BlockEvent="False" DisplayName="Hotkey Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="488,108" sap2010:WorkflowViewState.IdRef="HotkeyTriggerV2_2" Key="s" KeyModifiers="Alt" SchedulingMode="Sequential" TriggerId="243f5329-c1a4-475c-a689-6203c6a82586" UseWindowsHotKey="False" />
+            <ui:HotkeyTriggerV2 BlockEvent="False" DisplayName="Hotkey Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="488,108" sap2010:WorkflowViewState.IdRef="HotkeyTriggerV2_2" Key="S" KeyModifiers="Alt" SchedulingMode="Sequential" TriggerId="243f5329-c1a4-475c-a689-6203c6a82586" UseWindowsHotKey="False" />
           </scg:List>
         </ui:TriggerScope.Triggers>
       </ui:TriggerScope>

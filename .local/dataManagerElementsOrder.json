@@ -16,15 +16,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strSubject&Sequence_37",
         "statusWindowMessage&Sequence_39",
         "Config&Sequence_39",
         "instanceName&Sequence_39",
         "strContact&Sequence_37",
         "strEmail&Sequence_37",
-        "variable1&Sequence_37",
-        "variable2&Sequence_37",
-        "boolFileExists&Sequence_36",
-        "boolfilee&Sequence_36"
+        "boolFileExists&Sequence_36"
       ],
       "ArgumentsSectionElementsOrder": [
         "Hide_Messages",
