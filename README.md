@@ -1,12 +1,16 @@
-#Robotic Automation Process
-#Project description
-The project using bots to automate workflows with triggers 
-#Live URL
+## Robotic Process Automation
+This project was demostrating the how automation of job cards of customer complaints were being generated using UiPath.
 
-#Technologies used
- -UiPath Studio
- -Zoho Desk Application
- -Ms Excel
-#Contact inoformation
+## Live URL
+https://github.com/jomwasi/RPA-IP.git
+
+## Technologies used
+ - UiPath Studio
+ - Zoho Desk Application
+ - Ms Excel
+
+## Licence 
+This project is licensed under the MIT License.
+
+## Contact inoformation
 Email:jomwasi@gmail.com
-
